@@ -57,7 +57,6 @@ function detail(id){
 const newDish = () => {
     navigate("/managedishes");
     
-    window.location.reload();
   };
 
  

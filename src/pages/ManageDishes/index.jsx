@@ -26,7 +26,7 @@ const [charCount, setCharCount] = useState(0);
 
 
 /* role is to define if the dish have an id,
- and if it has, we know that it can be edited. */
+ and if it has, it can be edited. */
 let role = params.id ? true : false;  
     
 const navigate = useNavigate();
@@ -37,6 +37,16 @@ const navigate = useNavigate();
 
 
 useEffect(() => {
+
+
+   setDishName('');
+   setDishCategory('');
+  setDishPrice('');
+  setDescription('');
+  setTags([]); 
+  setImage('');
+  setCharCount(0);
+
   const fetchData = async () => {
 
         api.get('/dishes/details/'+params.id)  .then((res) => {

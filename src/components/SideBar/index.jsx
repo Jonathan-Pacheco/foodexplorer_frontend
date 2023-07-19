@@ -70,7 +70,7 @@ const newDish = () => {
     navigate("/managedishes");
     setCollapsed(true);
     setIsMenuOpen(false);
-    window.location.reload();
+   
 };
 
 

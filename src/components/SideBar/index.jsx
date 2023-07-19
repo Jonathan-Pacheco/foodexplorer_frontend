@@ -66,11 +66,10 @@ function detail(id){
 };
 
 
-const newDish = () => {
+function newDish() {
     navigate("/managedishes");
     setCollapsed(true);
     setIsMenuOpen(false);
-   
 };
 
 

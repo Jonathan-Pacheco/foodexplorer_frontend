@@ -51,13 +51,14 @@ function handleBack() {
   
 function detail(id){
     navigate(`/details/${id}`);
+ 
  }
 
 
-const newDish = () => {
-    navigate("/managedishes");
-    
+function newDish() {
+    navigate("/managedishes");   
   };
+ 
 
  
 const { signOut } = useAuth();
@@ -125,10 +126,10 @@ return (
    </ButtonMobile>
 }
 
-{userRole===2 && 
-   <Button onClick={newDish} style={{ height: 48}}>
-    <p>Novo prato</p>
-   </Button>
+{userRole===2 &&
+    <Button type='button' onClick={newDish} style={{ height: 48}}>
+    Novo prato
+    </Button> 
 }
 
   <Logout onClick={handleSignOut}>

@@ -132,7 +132,7 @@ export const Container = styled.header`
 
 
 
-export const Button = styled(Link)`
+export const Button = styled.button`
   color: ${({ theme }) => theme.COLORS.LIGHT_100};
   background-color: ${({ theme }) => theme.COLORS.TOMATO_100};
   

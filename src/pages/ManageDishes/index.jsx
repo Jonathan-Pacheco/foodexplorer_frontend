@@ -33,29 +33,18 @@ const navigate = useNavigate();
     
     function handleBack() {
     navigate("/");
+ 
 }
 
 
 useEffect(() => {
-
-
-   setDishName('');
-   setDishCategory('');
-  setDishPrice('');
-  setDescription('');
-  setTags([]); 
-  setImage('');
-  setCharCount(0);
-
   const fetchData = async () => {
 
-        api.get('/dishes/details/'+params.id)  .then((res) => {
-            
+        api.get('/dishes/details/'+params.id)  .then((res) => {            
             setDishName(res.data.dishname);
             setDishCategory(res.data.dishcategory);
             setDishPrice(res.data.dishprice);
-            setDescription(res.data.description);
-            
+            setDescription(res.data.description);            
             setImage(res.data.image);
             setTags(JSON.parse(res.data.tags))
         }).catch(error => {
@@ -65,9 +54,18 @@ useEffect(() => {
     }
     if(params.id){
     fetchData();
-    }
+    }else{
+      
+   setDishName('');
+   setDishCategory('');
+   setDishPrice('');
+   setDescription('');
+   setTags([]); 
+   setImage('');
+   setCharCount(0);
+  }
 
-},[])
+},[params])
 
 
 useEffect(() => {

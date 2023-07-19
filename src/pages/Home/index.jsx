@@ -9,7 +9,7 @@ import { Carousel } from "../../components/Carousel";
 import {api} from "../../services/api.js";
 
 import Flavors from "../../assets/flavors.png";
-import FlavorsMobile from "../../assets/flavors_2.png";
+import FlavorsMobile from "../../assets/Flavors_2.png";
 
 
 export function Home() {
